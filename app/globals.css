@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   --font-sans: var(--font-geist-sans);
@@ -10,15 +10,42 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
-
+html {
+  font-size: .95rem;
+}
+html,
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans);
+  scroll-behavior: smooth;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 10rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.cursor-custom-one {
+  cursor: url('/elements/cursor.png'), pointer;
+}
+.cursor-custom-two {
+  cursor: url('/elements/cursor-two.png'), pointer;
 }
