@@ -1,7 +1,6 @@
 import { cn } from '@/lib/utils';
 import Container from './Container';
 import Image from 'next/image';
-import VariableFontHoverByRandomLetter from './VariableFontHoverByRandomLetter';
 
 const list = [
   {
