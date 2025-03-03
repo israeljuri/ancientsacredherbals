@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Container from './Container';
 
 const CallToAction = () => {
   return (
@@ -12,7 +11,8 @@ const CallToAction = () => {
           alt=""
           className="w-full h-full object-cover absolute"
         />
-      </figure> <article className="overflow-hidden bg-purple-200 px-10 md:px-20 flex items-center md:items-start justify-center md:justify-center text-center md:text-left flex-col gap-6 p-6 py-10 md:p-10">
+      </figure>{' '}
+      <article className="overflow-hidden bg-purple-200 px-10 md:px-20 flex items-center md:items-start justify-center md:justify-center text-center md:text-left flex-col gap-6 p-6 py-10 md:p-10">
         <h3 className="text-5xl  leading-13 font-light md:text-5xl text-purple-700">
           Our Herbal Wellness Programs
         </h3>
@@ -41,8 +41,6 @@ const CallToAction = () => {
           </svg>
         </button>
       </article>
-
-     
     </section>
   );
 };

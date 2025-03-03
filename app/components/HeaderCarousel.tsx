@@ -42,7 +42,7 @@ const flowers = [
 ];
 
 const HeaderCarousel = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [
     Autoplay(),
     // Fade()
   ]);
