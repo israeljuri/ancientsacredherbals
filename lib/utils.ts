@@ -1,9 +1,6 @@
-//@ts-ignore
 import clsx from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
-//@ts-ignore
-export const cn = (...inputs: any) => {
-  //@ts-ignore
+export const cn = (...inputs: string[]) => {
   return twMerge(clsx(inputs));
 };
