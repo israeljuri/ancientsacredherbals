@@ -185,7 +185,7 @@ const Navbar = () => {
           {isScrolled && (
             <div
               onClick={() => setShow(!show)}
-              className="flex gap-2 items-center text-white"
+              className="flex md:hidden gap-2 items-center text-white"
             >
               <span>MENU</span>
               <button className=" text-white">
