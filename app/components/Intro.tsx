@@ -26,10 +26,10 @@ const Intro = () => {
       <Container>
         <div className="grid gap-5">
           <article className="grid place-items-center text-center md:text-left col-span-full mb-10">
-            <h3 className="flex flex-wrap gap-4 items-center justify-center md:justify-start text-5xl font-light text-purple-700">
+            <h3 className="flex flex-wrap gap-2 md:gap-4 items-center justify-center md:justify-start leading-8 text-5xl font-light text-purple-700 flex-col">
               <span>The call to the</span>
 
-              <div className="flex items-center gap-1">
+              <div className="flex flex-wrap items-center gap-1">
                 <span>green</span>
                 <Image
                   src="/elements/one.png"
@@ -38,8 +38,8 @@ const Intro = () => {
                   alt=""
                   className="w-[5rem]"
                 />
-              </div>
               <span>path</span>
+              </div>
             </h3>
           </article>
 

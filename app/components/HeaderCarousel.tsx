@@ -3,8 +3,6 @@
 import Image from 'next/image';
 
 import useEmblaCarousel from 'embla-carousel-react';
-// import { useEffect } from 'react';
-// import Fade from 'embla-carousel-fade';
 import Autoplay from 'embla-carousel-autoplay';
 import { cn } from '@/lib/utils';
 
@@ -19,32 +17,11 @@ const flowers = [
     label: 'Jasmine',
     contain: false,
   },
-  // {
-  //   path: '/flowers/3.png',
-  //   label: 'Rosemary',
-  //   contain: false,
-  // },
-  // {
-  //   path: '/flowers/4.png',
-  //   label: 'Rose',
-  //   contain: true,
-  // },
-  // {
-  //   path: '/flowers/5.png',
-  //   label: 'White Sage',
-  //   contain: true,
-  // },
-  // {
-  //   path: '/flowers/6.png',
-  //   label: 'Lavender',
-  //   contain: false,
-  // },
 ];
 
 const HeaderCarousel = () => {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
     Autoplay(),
-    // Fade()
   ]);
 
   const images = flowers.map((flower) => (
@@ -70,7 +47,7 @@ const HeaderCarousel = () => {
   ));
 
   return (
-    <section className="flex  items-center flex-col justify-center">
+    <section className="flex items-center flex-col justify-center">
       <div className="embla" ref={emblaRef}>
         <div className="embla__container h-[30rem]">{images}</div>
       </div>

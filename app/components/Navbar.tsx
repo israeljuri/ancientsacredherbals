@@ -6,6 +6,7 @@ import Container from './Container';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import CenterUnderline from './CenterUnderline';
+import { cn } from '@/lib/utils';
 
 type NavItem = {
   label: string;
@@ -41,10 +42,23 @@ const list: NavItem[] = [
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [show, setShow] = useState(false);
+  const [showAlt, setShowAlt] = useState(false);
+
+  useEffect(() => {
+    let timeout: any;
+    if (show) {
+      timeout = setTimeout(() => {
+        setShowAlt(true);
+      }, 1);
+    } else setShowAlt(false);
+
+    return () => clearTimeout(timeout);
+  }, [show]);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 1000); // Change 50 to adjust sensitivity
+      setIsScrolled(window.scrollY > 50); // Change 50 to adjust sensitivity
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -63,28 +77,27 @@ const Navbar = () => {
       }`}
     >
       <Link href={item.path}>
-        <CenterUnderline label={item.label}  />{' '}
+        <CenterUnderline label={item.label} />{' '}
       </Link>
     </li>
   ));
   return (
     <nav
-      className={`z-50 p-4 transition-all duration-300 py-8 bg-purple-900 left-0 w-full top-0 ${
-        isScrolled
-          ? 'sticky left-0 right-0 top-0 w-full shadow-lg bg-purple-900'
-          : ''
-      }`}
+      className={`z-50 p-4 transition-all duration-300 py-8 bg-purple-900 sticky left-0 right-0 top-0 w-full`}
     >
       <Container>
         <div className="flex items-center justify-between">
-      {!isScrolled &&    <Link href="/">
-            <figure className="w-[10rem]">
-              <Image src="/logo.png" width={500} height={500} alt="" />
-            </figure>
-          </Link>}
+          {!isScrolled && (
+            <Link href="/">
+              <figure className="w-[8rem]">
+                <Image src="/logo.png" width={500} height={500} alt="" />
+              </figure>
+            </Link>
+          )}
+
           <ul className="hidden md:flex items-center gap-8">{items}</ul>
 
-          <ul className="flex items-center gap-5 text-white">
+          <ul className="flex items-center gap-8 text-white">
             <Link href={'/'} className="" legacyBehavior passHref>
               <a>
                 <li className="grid place-items-center rounded-full">
@@ -153,7 +166,63 @@ const Navbar = () => {
                 </a>
               </Link> */}
           </ul>
+
+          {isScrolled && (
+            <button
+              onClick={() => setShow(!show)}
+              className="grid w-[4rem] h-[4rem] border border-purple-500 rounded-full p-2 text-white place-items-center md:hidden"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-menu"
+              >
+                <line x1="4" x2="20" y1="12" y2="12" />
+                <line x1="4" x2="20" y1="6" y2="6" />
+                <line x1="4" x2="20" y1="18" y2="18" />
+              </svg>
+            </button>
+          )}
         </div>
+        {show && (
+          <div className="fixed top-0 left-0 w-full h-screen z-50">
+            <div
+              className="bg-black opacity-30 w-full h-full absolute top-0 left-0 z-10 cursor-pointer"
+              onClick={() => setShow(!show)}
+            ></div>
+
+            <div
+              className={cn(
+                'h-full absolute top-0 transition-all duration-400 z-20 grid items-center px-8 w-max overflow-y-auto bg-white',
+                showAlt ? 'left-0' : '-left-100'
+              )}
+            >
+              <ul className="grid -mt-10 gap-4 text-3xl">
+                {list.map((item) => (
+                  <li
+                    key={item.label}
+                    className={
+                      pathname === item.path
+                        ? 'text-purple-500'
+                        : 'text-gray-500 hover:text-black'
+                    }
+                  >
+                    <Link href={item.path}>
+                      <CenterUnderline label={item.label} />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        )}
       </Container>
     </nav>
   );

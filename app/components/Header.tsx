@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import Container from './Container';
 import HeaderCarousel from './HeaderCarousel';
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
 import TextCutReveal from './TextCutReveal';
 
 const Header = () => {
   return (
     <>
       {/* bg-purple-900 bg-gradient-to-br from-purple-600 to-purple-900 */}
-      <Navbar />
+      {/* <Navbar /> */}
       <header className="bg-purple-900">
         <Container>
           <div className="min-h-screen pt-10 pb-20 md:pb-10 md:pt-0 grid grid-cols-1 md:grid-cols-[1fr_1.5fr_1fr] place-content-center place-items-center">
@@ -25,7 +25,7 @@ const Header = () => {
               <Link href="#atbs" legacyBehavior passHref>
                 <a>
                   <button className="btn bg-purple-500 text-white">
-                    Get Started
+                    See All Herbal Profiles
                   </button>
                 </a>
               </Link>
@@ -42,7 +42,7 @@ const Header = () => {
 
               <Link href="#intro" legacyBehavior passHref>
                 <a>
-                  <button className="cursor-pointer border animate-bounce border-purple-500 h-[4rem] w-[4rem] rounded-full grid place-items-center p-2 text-purple-500">
+                  <button className="cursor-pointer border animate-bounce border-purple-500 h-[4rem] w-[4rem] rounded-full grid place-items-center p-2 text-white">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
