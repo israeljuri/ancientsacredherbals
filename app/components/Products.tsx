@@ -41,7 +41,7 @@ const Products = () => {
   const products = productsImage.map((flower) => (
     <article
       key={flower.id}
-      className="bg-white border border-gray-100 rounded-xl overflow-hidden h-full grid md:min-h-[30rem] min-h-[40rem] grid-cols-1 md:grid-cols-2 md:grid-rows-1 grid-rows-2 relative embla__slide"
+      className="bg-white rounded-xl overflow-hidden h-full grid md:min-h-[30rem] min-h-[40rem] grid-cols-1 md:grid-cols-2 md:grid-rows-1 grid-rows-2 relative embla__slide"
     >
       <figure className="relative h-full w-full overflow-hidden">
         <Image
@@ -63,7 +63,7 @@ const Products = () => {
           necessitatibus explicabo nostrum debitis dolore.
         </p>
 
-        <button className="mt-4 flex items-center gap-2 btn bg-purple-500 text-white">
+        <button className="mt-4 md:w-auto w-full flex justify-center items-center gap-2 btn bg-purple-900 text-white">
           <span>Add to cart </span>
 
           <svg
@@ -88,11 +88,11 @@ const Products = () => {
   ));
 
   return (
-    <section className="bg-gray-100">
+    <section className="bg-purple-500">
       <Container>
-        <div className="pt-20 pb-8 grid gap-16">
+        <div className="py-20 grid gap-16">
           <article>
-            <h3 className="flex flex-wrap gap-3 items-center justify-center text-5xl font-light text-purple-700 ">
+            <h3 className="flex flex-wrap gap-3 items-center justify-center text-5xl font-light text-white">
               Herbal Kits
             </h3>
           </article>
@@ -100,13 +100,13 @@ const Products = () => {
           <div className="embla" ref={emblaRef}>
             <div className="embla__container">{products}</div>
           </div>
-        </div>
-
-        <div className="mt-10 grid place-items-center">
+        <div className="mt-2 text-purple-100 grid place-items-center">
           <Link href="/products">
             <CenterUnderline label="See all products" />
           </Link>
         </div>
+        </div>
+
       </Container>
     </section>
   );

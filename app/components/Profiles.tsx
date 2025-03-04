@@ -70,7 +70,7 @@ const Profiles = () => {
                   className="w-[5rem] -rotate-45"
                 />
               </div>
-                <span className='-mt-10 md:mt-0'>Profiles</span>
+              <span className="-mt-10 md:mt-0">Profiles</span>
             </h3>
             <p className="font-light max-w-[59ch]">
               Ancient herbalism used plants for healing based on tradition and
@@ -81,12 +81,12 @@ const Profiles = () => {
             </p>
           </article>
 
-          <div className="grid   gap-4">
+          <div className="grid gap-4">
             <figure className="grid place-content-start grid-cols-1 md:grid-cols-2 gap-5">
               {list.map((item) => (
                 <figure
                   key={item.id}
-                  className="relative overflow-hidden w-full h-[15rem] group rounded-xl transition-all duration-200"
+                  className="relative overflow-hidden w-full h-[20rem] group rounded-xl transition-all duration-200"
                 >
                   <Image
                     className="w-full h-full object-cover"
@@ -97,12 +97,16 @@ const Profiles = () => {
                   />
 
                   <div className="transition-all duration-400 fade-t-4 bg-purple-600 text-white  opacity-90 absolute w-full p-5 gap-4 text-light  left-0 bottom-0">
-                    <h4 className='text-2xl'>{item.title}</h4>
-                    <p className='mt-2 text-sm truncate ...'>{item.desc}</p>
+                    <h4 className="text-2xl">{item.title}</h4>
+                    <p className="mt-2 text-sm max-w-[40ch] truncate ...">
+                      {item.desc}
+                    </p>
 
-                    <button className="text-xs mt-2">
-                      Learn more
-                    </button>
+                    <Link legacyBehavior passHref href="/">
+                      <a>
+                        <button className="underline text-xs mt-2">Read more</button>
+                      </a>
+                    </Link>
                   </div>
                 </figure>
               ))}
@@ -142,11 +146,11 @@ const Profiles = () => {
             </ul>
           </div>
 
-          <div className="mt-20 grid place-items-center">
-          <Link href="/herbal-profiles">
-            <CenterUnderline label="See all profiles" />
-          </Link>
-        </div>
+          <div className="mt-10 text-purple-700 grid place-items-center">
+            <Link href="/herbal-profiles">
+              <CenterUnderline label="See all profiles" />
+            </Link>
+          </div>
         </div>
       </Container>
     </section>

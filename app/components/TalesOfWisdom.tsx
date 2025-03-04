@@ -76,7 +76,7 @@ const TalesOfWisdom = () => {
               >
                 <div className="flex flex-col gap-1">
                   <small className='text-purple-600 text-xs'>Ancient tales of the</small>
-                  <h3 className="text-2xl text-purple-900 md:text-4xl">
+                  <h3 className="text-3xl text-purple-700 md:text-4xl">
                     {cat.title}
                   </h3>
                 </div>

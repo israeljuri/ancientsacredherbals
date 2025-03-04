@@ -42,6 +42,7 @@ const list: NavItem[] = [
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolledAlt, setIsScrolledAlt] = useState(false);
   const [show, setShow] = useState(false);
   const [showAlt, setShowAlt] = useState(false);
 
@@ -55,10 +56,20 @@ const Navbar = () => {
 
     return () => clearTimeout(timeout);
   }, [show]);
+  useEffect(() => {
+    let timeout: ReturnType<typeof setTimeout>;
+    if (isScrolled) {
+      timeout = setTimeout(() => {
+        setIsScrolledAlt(true);
+      }, 400);
+    } else setIsScrolledAlt(false);
+
+    return () => clearTimeout(timeout);
+  }, [isScrolled]);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50); // Change 50 to adjust sensitivity
+      setIsScrolled(window.scrollY > 500); // Change 50 to adjust sensitivity
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -83,7 +94,11 @@ const Navbar = () => {
   ));
   return (
     <nav
-      className={`z-50 p-4 transition-all duration-300 py-8 bg-purple-900 sticky left-0 right-0 top-0 w-full`}
+      className={cn(
+        'z-50 p-4 transition-all duration-500 py-8 bg-purple-900 w-full static',
+        isScrolled ? '-top-100' : 'top-0',
+        isScrolledAlt ? 'fixed top-0' : ''
+      )}
     >
       <Container>
         <div className="flex items-center justify-between">
@@ -168,27 +183,30 @@ const Navbar = () => {
           </ul>
 
           {isScrolled && (
-            <button
+            <div
               onClick={() => setShow(!show)}
-              className="grid w-[4rem] h-[4rem] border border-purple-500 rounded-full p-2 text-white place-items-center md:hidden"
+              className="flex gap-2 items-center text-white"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="lucide lucide-menu"
-              >
-                <line x1="4" x2="20" y1="12" y2="12" />
-                <line x1="4" x2="20" y1="6" y2="6" />
-                <line x1="4" x2="20" y1="18" y2="18" />
-              </svg>
-            </button>
+              <span>MENU</span>
+              <button className=" text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-menu"
+                >
+                  <line x1="4" x2="20" y1="12" y2="12" />
+                  <line x1="4" x2="20" y1="6" y2="6" />
+                  <line x1="4" x2="20" y1="18" y2="18" />
+                </svg>
+              </button>
+            </div>
           )}
         </div>
         {show && (
@@ -200,13 +218,14 @@ const Navbar = () => {
 
             <div
               className={cn(
-                'h-full absolute top-0 transition-all duration-400 z-20 grid items-center px-8 w-max overflow-y-auto bg-white',
+                'h-full absolute top-0 transition-all duration-400 z-20 grid items-center px-10 w-max overflow-y-auto bg-white',
                 showAlt ? 'left-0' : '-left-100'
               )}
             >
-              <ul className="grid -mt-10 gap-4 text-3xl">
+              <ul className="grid -mt-10 gap-4 text-4xl">
                 {list.map((item) => (
                   <li
+                    onClick={() => setShow(!show)}
                     key={item.label}
                     className={
                       pathname === item.path
