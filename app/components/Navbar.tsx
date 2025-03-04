@@ -46,7 +46,7 @@ const Navbar = () => {
   const [showAlt, setShowAlt] = useState(false);
 
   useEffect(() => {
-    let timeout: any;
+    let timeout: ReturnType<typeof setTimeout>;
     if (show) {
       timeout = setTimeout(() => {
         setShowAlt(true);
