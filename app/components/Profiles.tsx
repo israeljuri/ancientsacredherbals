@@ -70,8 +70,9 @@ const Profiles = () => {
                   className="w-[5rem] -rotate-45"
                 />
               </div>
-              <span className="-mt-10 md:mt-0">Profiles</span>
+              <span className="-mt-10 sm:mt-0">Profiles</span>
             </h3>
+
             <p className="font-light max-w-[59ch]">
               Ancient herbalism used plants for healing based on tradition and
               observation. Modern medicine isolates active compounds for
@@ -96,7 +97,9 @@ const Profiles = () => {
                     height={500}
                   />
 
-                  <div className="transition-all duration-400 fade-t-4 bg-purple-600 text-white  opacity-90 absolute w-full p-5 gap-4 text-light  left-0 bottom-0">
+                  <div className="transition-all duration-400  bg-purple-600 fade h-[100%]  opacity-95 absolute w-full p-5 gap-4 text-light left-0 bottom-0"></div>
+
+                  <div className="absolute text-white bottom-0 left-0 w-full p-5 md:p-8">
                     <h4 className="text-2xl">{item.title}</h4>
                     <p className="mt-2 text-sm max-w-[40ch] truncate ...">
                       {item.desc}
@@ -104,7 +107,9 @@ const Profiles = () => {
 
                     <Link legacyBehavior passHref href="/">
                       <a>
-                        <button className="underline text-xs mt-2">Read more</button>
+                        <button className="underline text-xs mt-2">
+                          Read more
+                        </button>
                       </a>
                     </Link>
                   </div>

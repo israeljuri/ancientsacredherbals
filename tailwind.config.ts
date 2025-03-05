@@ -1,5 +1,4 @@
 import type { Config } from 'tailwindcss';
-import fade from '@eioluseyi/tailwind-fade';
 
 const config: Config = {
   content: [
@@ -10,6 +9,6 @@ const config: Config = {
   theme: {
     extend: {},
   },
-  plugins: [fade],
+  plugins: [require('@eioluseyi/tailwind-fade')],
 } satisfies Config;
 export default config;

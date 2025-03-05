@@ -3,17 +3,20 @@ import Image from 'next/image';
 const CallToAction = () => {
   return (
     <section className="relative z-20 grid grid-cols-1 md:grid-cols-[1fr_1fr] rounded-xl overflow-hidden min-h-[30rem] text-white">
-      <figure className="relative overflow-hidden min-h-[16rem]">
-        <Image
-          src="/program.jpg"
-          width={500}
-          height={500}
-          alt=""
-          className="w-full h-full object-cover absolute"
-        />
+      <figure className="relative overflow-hidden min-h-[16rem] bg-purple-200">
+        <div className="rounded-xl h-full w-full">
+          <video
+            src="/videos/prepare-herbs.mp4"
+            autoPlay
+            // controls
+            muted
+            loop
+            className="w-full h-full object-cover"
+          ></video>
+        </div>
       </figure>{' '}
       <article className="overflow-hidden bg-purple-200 px-10 md:px-20 flex items-center md:items-start justify-center md:justify-center text-center md:text-left flex-col gap-6 p-6 py-10 md:p-10">
-        <h3 className="text-5xl  leading-13 font-light md:text-5xl text-purple-700">
+        <h3 className="text-4xl md:text-5xl leading-13 font-light text-purple-700">
           Our Herbal Wellness Programs
         </h3>
         <p className="text-purple-700 font-light">

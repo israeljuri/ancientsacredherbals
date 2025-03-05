@@ -27,7 +27,7 @@ const list: NavItem[] = [
     path: '/about',
   },
   {
-    label: 'Herbal Profiles',
+    label: 'Profiles',
     path: '/herbal-profiles',
   },
   {

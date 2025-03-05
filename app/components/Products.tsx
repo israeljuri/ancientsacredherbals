@@ -4,6 +4,7 @@ import Container from './Container';
 import Image from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
+import Fade from 'embla-carousel-fade';
 import Link from 'next/link';
 import CenterUnderline from './CenterUnderline';
 
@@ -27,16 +28,16 @@ const productsImage = [
     title: 'Kit 3',
     price: 40,
   },
-  {
-    id: 4,
-    path: '/products/Four.jpg',
-    title: 'Kit 4',
-    price: 50,
-  },
+  // {
+  //   id: 4,
+  //   path: '/products/Four.jpg',
+  //   title: 'Kit 4',
+  //   price: 50,
+  // },
 ];
 
 const Products = () => {
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay(), Fade()]);
 
   const products = productsImage.map((flower) => (
     <article
@@ -53,17 +54,17 @@ const Products = () => {
         />
       </figure>
 
-      <article className="border-l border-gray-200 flex flex-col items-start py-10 px-10 justify-center gap-4">
+      <article className="bg-purple-900 text-white border-l border-purple-800 flex flex-col items-start py-10 px-10 justify-center gap-4">
         <h3 className="text-4xl d:text-5xl font-light">{flower.title}</h3>
-        <span className="text-2xl">${flower.price}</span>
-        <p className="text-gray-500 font-light">
+        <p className="text-purple-200 font-light">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla
           voluptatibus velit culpa incidunt, molestias quam nemo aliquid
           perspiciatis nam, doloremque tenetur ad ipsam aspernatur ipsa
           necessitatibus explicabo nostrum debitis dolore.
         </p>
+        <span className="text-2xl">${flower.price}</span>
 
-        <button className="mt-4 md:w-auto w-full flex justify-center items-center gap-2 btn bg-purple-900 text-white">
+        <button className="mt-4 md:w-auto w-full flex justify-center items-center gap-2 btn bg-purple-500 text-white">
           <span>Add to cart </span>
 
           <svg
@@ -88,11 +89,11 @@ const Products = () => {
   ));
 
   return (
-    <section className="bg-purple-500">
+    <section className="bg-purple-100">
       <Container>
-        <div className="py-20 grid gap-16">
+        <div className="pt-10 pb-16 grid gap-16">
           <article>
-            <h3 className="flex flex-wrap gap-3 items-center justify-center text-5xl font-light text-white">
+            <h3 className="flex flex-wrap gap-3 items-center justify-center text-5xl font-light text-purple-800">
               Herbal Kits
             </h3>
           </article>
@@ -100,13 +101,12 @@ const Products = () => {
           <div className="embla" ref={emblaRef}>
             <div className="embla__container">{products}</div>
           </div>
-        <div className="mt-2 text-purple-100 grid place-items-center">
-          <Link href="/products">
-            <CenterUnderline label="See all products" />
-          </Link>
+          <div className="mt-2 text-purple-800 grid place-items-center">
+            <Link href="/products">
+              <CenterUnderline label="See all products" />
+            </Link>
+          </div>
         </div>
-        </div>
-
       </Container>
     </section>
   );

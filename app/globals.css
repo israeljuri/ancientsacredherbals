@@ -42,10 +42,13 @@ body {
   flex: 0 0 100%;
   min-width: 0;
 }
+ 
 
-.cursor-custom-one {
-  cursor: url('/elements/cursor.png'), pointer;
+.fade {
+  -webkit-mask-image: linear-gradient(transparent, white);
+  mask-image: linear-gradient(transparent, white);
 }
-.cursor-custom-two {
-  cursor: url('/elements/cursor-two.png'), pointer;
-}
+
+ .about {
+  background: url('/');
+ }
