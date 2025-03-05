@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 const CallToAction = () => {
   return (
     <section className="relative z-20 grid grid-cols-1 md:grid-cols-[1fr_1fr] rounded-xl overflow-hidden min-h-[30rem] text-white">

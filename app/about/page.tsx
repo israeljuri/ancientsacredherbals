@@ -1,4 +1,3 @@
-import BreathingText from '../components/BreathingText';
 import Container from '../components/Container';
 
 const page = () => {
@@ -6,9 +5,11 @@ const page = () => {
     <main className="bg-purple-100">
       <header className="flex items-center justify-center flex-col gap-4 text-purple-700 font-light pt-20 md:pt-20 text-center px-2">
         <h1 className="text-xl md:text-xl capitalize">
-         Welcome to Ancient Sacred Herbals
+          Welcome to Ancient Sacred Herbals
         </h1>
-        <span className="text-5xl capitalize font-light">The call to the green path</span>
+        <span className="text-5xl capitalize font-light">
+          The call to the green path
+        </span>
       </header>
 
       <div className="pb-10 pt-10">
