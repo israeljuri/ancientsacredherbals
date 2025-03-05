@@ -34,7 +34,7 @@ const Header = () => {
             <HeaderCarousel />
 
             <article className="grid place-items-center md:place-items-start gap-16 md:px-0 px-10">
-              <p className="text-purple-300 text-center md:text-left text-lg">
+              <p className="text-purple-300 text-center md:text-left text-lg font-light">
                 Whether you&#39;re a seasoned herbalist, a healing arts
                 practitioner, or someone just beginning to hear the call of the
                 plants, you&#39;ve found your way here for a reason.

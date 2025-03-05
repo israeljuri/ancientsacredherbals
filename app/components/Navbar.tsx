@@ -218,11 +218,11 @@ const Navbar = () => {
 
             <div
               className={cn(
-                'h-full absolute top-0 transition-all duration-400 z-20 grid items-center px-10 w-max overflow-y-auto bg-white',
+                'h-full absolute top-0 transition-all duration-400 z-20 grid items-center px-10 pr-20 w-max overflow-y-auto bg-white',
                 showAlt ? 'left-0' : '-left-100'
               )}
             >
-              <ul className="grid -mt-10 gap-4 text-4xl">
+              <ul className="grid -mt-10 gap-2 text-3xl">
                 {list.map((item) => (
                   <li
                     onClick={() => setShow(!show)}
