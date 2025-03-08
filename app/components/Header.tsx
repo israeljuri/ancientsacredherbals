@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 
 const Header = () => {
   const [isClient, setIsClient] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
 
   useEffect(() => {
     setIsClient(true); // Runs only on the client side
