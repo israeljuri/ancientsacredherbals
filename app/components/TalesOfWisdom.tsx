@@ -34,7 +34,7 @@ const TalesOfWisdom = () => {
       <Container>
         <div className="grid grid-cols-1 gap-4 md:gap-4 md:grid-cols-[1fr_1fr] place-items-center">
           <article className="grid gap-6 text-center md:text-center col-span-full mb-10">
-            <h3 className="flex flex-wrap gap-3 items-center justify-center md:justify-center text-5xl font-light text-purple-700 max-w-[20ch]">
+            <h3 className="flex flex-wrap gap-3 items-center justify-center md:justify-center text-4xl md:text-5xl font-light text-purple-700 max-w-[20ch]">
               <span>Ancient Herbs</span>
               <span>of&nbsp;the</span>
 

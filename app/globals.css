@@ -16,9 +16,7 @@
     --foreground: #ededed;
   }
 }
-html {
-  font-size: 0.95rem;
-}
+
 html,
 body {
   font-family: var(--font-geist-sans);

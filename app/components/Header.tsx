@@ -15,7 +15,7 @@ const Header = () => {
             className="absolute z-10 top-0 left-0 w-full h-full object-cover"
           ></video>
 
-          <div className="absolute top-0 left-0 w-full h-full z-20 bg-linear-to-br from-black to-purple-700 opacity-50"></div>
+          <div className="absolute top-0 left-0 w-full h-full z-20 bg-linear-to-br from-black to-purple-900 opacity-30"></div>
 
           <article className="z-40 absolute flex flex-col md:items-center items-center justify-center text-center md:text-center px-10 md:px-0 gap-5">
             <h1 className="text-white text-5xl md:text-6xl max-w-[20ch] font-normal">

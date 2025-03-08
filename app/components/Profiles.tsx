@@ -59,7 +59,7 @@ const Profiles = () => {
       <Container>
         <div className="">
           <article className="grid gap-4 text-center md:text-center items-center justify-center mb-10">
-            <h3 className="flex flex-wrap gap-3 items-center justify-center text-5xl font-light text-purple-700 ">
+            <h3 className="flex flex-wrap gap-3 items-center justify-center text-4xl md:text-5xl font-light text-purple-700 ">
               <div className="flex flex-wrap items-center justify-center gap-5 md:gap-4">
                 <span>Herbal</span>
                 <Image

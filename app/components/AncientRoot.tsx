@@ -9,7 +9,7 @@ const AncientRoot = () => {
       <Container>
         <div className="grid grid-cols-1 gap-4 md:gap-20 md:grid-cols-[1fr_1fr] place-items-center">
           <article className="grid gap-10 text-center md:text-left mb-10 text-black">
-            <h3 className="flex flex-wrap gap-3 items-center justify-center md:justify-start text-5xl font-light text-purple-700">
+            <h3 className="flex flex-wrap gap-3 items-center justify-center md:justify-start text-4xl md:text-5xl font-light text-purple-700">
               <div className="flex flex-wrap items-center gap-1">
                 <span>Ancient</span>
                 <Image
