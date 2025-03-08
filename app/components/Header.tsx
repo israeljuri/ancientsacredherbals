@@ -1,7 +1,4 @@
 import Link from 'next/link';
-import Container from './Container';
-import HeaderCarousel from './HeaderCarousel';
-// import Navbar from './Navbar';
 import TextCutReveal from './TextCutReveal';
 
 const Header = () => {
@@ -30,7 +27,7 @@ const Header = () => {
               Bridging the gap between Ancient and Modern ways of using herbs
             </p>
 
-            <Link href="#atbs" className='' legacyBehavior passHref>
+            <Link href="#atbs" className="" legacyBehavior passHref>
               <a>
                 <button className="btn mt-10 bg-white text-purple-800 font-light">
                   See All Herbal Profiles
