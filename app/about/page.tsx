@@ -5,10 +5,10 @@ const page = () => {
     <main className="bg-purple-100">
       <header className="flex items-center justify-center flex-col gap-4 text-purple-700 font-light pt-20 md:pt-20 text-center px-2">
         <h1 className="text-xl md:text-xl capitalize">
-          Welcome to Ancient Sacred Herbals
+          The call to the green path
         </h1>
         <span className="text-5xl capitalize font-light">
-          The call to the green path
+          Welcome to Ancient Sacred Herbals
         </span>
       </header>
 
@@ -16,7 +16,7 @@ const page = () => {
         <Container>
           <div className="grid gap-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-10">
-              <div className="rounded-xl h-full w-full overflow-hidden">
+              <div className="rounded-xl h-full w-full overflow-hidden bg-purple-200">
                 <video
                   src="/videos/about.mp4"
                   autoPlay
@@ -60,7 +60,7 @@ const page = () => {
 
             <div className="mx-auto max-w-[50rem]">
               <div className="grid grid-cols-1  gap-8 py-10">
-                <div className="rounded-xl h-[25rem] w-full overflow-hidden">
+                <div className="rounded-xl h-[25rem] w-full overflow-hidden bg-purple-200">
                   <video
                     src="/videos/global.mp4"
                     autoPlay
@@ -70,7 +70,7 @@ const page = () => {
                     className="w-full h-full object-cover"
                   ></video>
                 </div>
-                <section className="bg-purple-50 flex flex-col items-start gap-8 font-light border border-purple-100 md:p-10 p-8 leading-8 rounded-xl text-lg text-purple-800">
+                <section className="flex flex-col items-start gap-8 font-light leading-8 rounded-xl text-lg text-purple-800">
                   <h4 className="text-5xl text-purple-600">
                     Our Global Perspective
                   </h4>
@@ -107,7 +107,7 @@ const page = () => {
               </div>
 
               <div className="grid grid-cols-1  gap-8 py-10 pt-12">
-                <div className="rounded-xl h-[25rem] w-full overflow-hidden">
+                <div className="rounded-xl h-[25rem] w-full overflow-hidden bg-purple-200">
                   <video
                     src="/videos/focus.mp4"
                     autoPlay
@@ -117,7 +117,7 @@ const page = () => {
                     className="w-full h-full object-cover"
                   ></video>
                 </div>
-                <section className="bg-purple-50 flex flex-col items-start gap-8 font-light border border-purple-100 md:p-10 p-8 leading-8 rounded-xl text-lg text-purple-800">
+                <section className=" flex flex-col items-start gap-8 font-light leading-8 rounded-xl text-lg text-purple-800">
                   <div className="grid gap-2">
                     <span className="text-5xl text-purple-600">Our Focus</span>
                   </div>

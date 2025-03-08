@@ -7,12 +7,39 @@ import TextCutReveal from './TextCutReveal';
 const Header = () => {
   return (
     <>
-      {/* bg-purple-900 bg-gradient-to-br from-purple-600 to-purple-900 */}
-      {/* <Navbar /> */}
       <header className="bg-purple-900">
-        <Container>
-          <div className="min-h-screen pt-10 pb-20 md:pb-10 md:pt-0 grid grid-cols-1 md:grid-cols-[1fr_1.5fr_1fr] place-content-center place-items-center">
-            <article className="flex flex-col md:items-start items-center justify-center text-center md:text-left px-10 md:px-0 gap-10">
+        <div className="relative min-h-screen w-full pt-10 pb-20 md:pb-10 md:pt-0 grid grid-cols-1 md:grid-cols-[1fr_1.5fr_1fr] place-content-center place-items-center">
+          <video
+            src="/videos/header.mp4"
+            autoPlay
+            // controls
+            muted
+            loop
+            className="absolute z-10 top-0 left-0 w-full h-full object-cover"
+          ></video>
+
+          <div className="absolute top-0 left-0 w-full h-full z-20 bg-linear-to-br from-black to-purple-700 opacity-50"></div>
+
+          <article className="z-40 absolute flex flex-col md:items-center items-center justify-center text-center md:text-center px-10 md:px-0 gap-5">
+            <h1 className="text-white text-6xl leading-15 max-w-[20ch] font-normal">
+              <TextCutReveal containerClassName="flex md:block md:items-auto items-center md:justify-center justify-center">
+                Welcome To the Ancient Path of Sacred Plant Wisdom
+              </TextCutReveal>
+            </h1>
+            <p className="font-light text-gray-200 text-xl max-w-[38ch]">
+              Bridging the gap between Ancient and Modern ways of using herbs
+            </p>
+
+            <Link href="#atbs" className='' legacyBehavior passHref>
+              <a>
+                <button className="btn mt-10 bg-white text-purple-800 font-light">
+                  See All Herbal Profiles
+                </button>
+              </a>
+            </Link>
+          </article>
+
+          {/* <article className="flex flex-col md:items-start items-center justify-center text-center md:text-left px-10 md:px-0 gap-10">
               <h1 className="text-white text-5xl leading-12 font-light">
                 <TextCutReveal containerClassName="flex md:block md:items-auto items-center md:justify-auto justify-center">
                   Ancient Path of&nbsp;Sacred Plant&nbsp;Wisdom
@@ -61,9 +88,8 @@ const Header = () => {
                   </button>
                 </a>
               </Link>
-            </article>
-          </div>
-        </Container>
+            </article> */}
+        </div>
       </header>
     </>
   );

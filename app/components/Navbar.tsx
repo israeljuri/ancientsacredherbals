@@ -95,16 +95,16 @@ const Navbar = () => {
   return (
     <nav
       className={cn(
-        'z-50 p-4 transition-all duration-500 py-8 bg-purple-900 w-full static',
+        'z-50 p-4 transition-all duration-500 py-5 bg-purple-900 w-full static',
         isScrolled ? '-top-100' : 'top-0',
-        isScrolledAlt ? 'fixed top-0' : ''
+        isScrolledAlt ? 'fixed top-0 py-8' : ''
       )}
     >
       <Container>
         <div className="flex items-center justify-between">
           {!isScrolled && (
             <Link href="/">
-              <figure className="w-[8rem]">
+              <figure className="w-[10rem]">
                 <Image src="/logo.png" width={500} height={500} alt="" />
               </figure>
             </Link>
@@ -218,11 +218,11 @@ const Navbar = () => {
 
             <div
               className={cn(
-                'h-full absolute top-0 transition-all duration-400 z-20 grid items-center px-10 pr-20 w-max overflow-y-auto bg-white',
+                'h-full absolute top-0 transition-all duration-400 z-20 grid items-center px-10 w-max overflow-y-auto bg-white',
                 showAlt ? 'left-0' : '-left-100'
               )}
             >
-              <ul className="grid -mt-10 gap-2 text-3xl">
+              <ul className="grid -mt-10 gap-4 text-4xl">
                 {list.map((item) => (
                   <li
                     onClick={() => setShow(!show)}

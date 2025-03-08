@@ -22,11 +22,11 @@ mind, and spirit.`,
 
 const Intro = () => {
   return (
-    <section id="intro" className="bg-gray-100 pb-20 py-20">
+    <section id="intro" className="bg-purple-900 py-26">
       <Container>
         <div className="grid gap-5">
           <article className="grid place-items-center text-center md:text-left col-span-full mb-10">
-            <h3 className="flex flex-wrap gap-2 md:gap-4 items-center justify-center md:justify-start leading-8 text-5xl font-light text-purple-700 flex-col">
+            <h3 className="flex flex-wrap gap-2 md:gap-4 items-center justify-center md:justify-start leading-8 text-5xl font-light text-white flex-col">
               <span>The call to the</span>
 
               <div className="flex flex-wrap items-center gap-1">
@@ -47,12 +47,12 @@ const Intro = () => {
             {list.map((item, index) => (
               <article key={item.id} className="grid gap-4">
                 {Boolean(index % 2) && (
-                  <p className="hidden md:block bg-white text-black text-lg border border-purple-100 p-5 rounded-xl">
+                  <p className="hidden md:block bg-purple-500 text-purple-100 text-lg p-6 rounded-xl">
                     {item.content}
                   </p>
                 )}
 
-                <span className="hidden bg-white md:grid border border-gray-200  rounded-full text-black text-lg font-light h-[4rem] w-[4rem] place-items-center self-center">
+                <span className="hidden bg-transparent md:grid border border-purple-400 text-purple-400 rounded-full text-xl font-light h-[4rem] w-[4rem] place-items-center self-center">
                   {item.id}
                 </span>
 
@@ -62,16 +62,16 @@ const Intro = () => {
                     index % 2 ? 'justify-end' : 'justify-start'
                   )}
                 >
-                  <span className="border bg-white border-gray-200  rounded-full text-black text-lg font-light h-[4rem] w-[4rem] grid place-items-center self-center">
+                  <span className="border bg-transparent rounded-full border-purple-400 text-purple-400  text-lg font-light h-[4rem] w-[4rem] grid place-items-center self-center">
                     {item.id}
                   </span>
                 </div>
                 {!Boolean(index % 2) && (
-                  <p className="hidden md:block bg-white text-black text-lg border border-purple-100 p-5 rounded-xl">
+                  <p className="hidden md:block bg-purple-500 text-purple-100 text-lg p-6 rounded-xl">
                     {item.content}
                   </p>
                 )}
-                <p className="block md:hidden bg-white text-black text-lg border border-purple-100 p-5 rounded-xl">
+                <p className="block md:hidden bg-purple-500 text-purple-100 text-lg p-6 rounded-xl">
                   {item.content}
                 </p>
               </article>

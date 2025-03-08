@@ -12,7 +12,7 @@ const Footer = () => {
 
       <footer className="p-5 bg-purple-900">
         <Container>
-          <div className="min-h-[25rem]"></div>
+          <div className="min-h-[15rem]"></div>
         </Container>
       </footer>
     </section>

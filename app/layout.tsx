@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
-import {  Geist_Mono, Inter } from 'next/font/google';
+import { Geist_Mono, Fredoka } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
-const geistSans = Inter({
+const geistSans = Fredoka({
   variable: '--font-geist-sans',
   subsets: ['latin'],
-  weight: ["100", "200", "300", "400", "500", "600", "700"]
+  weight: ['300', '400', '500', '600', '700'],
 });
 
 const geistMono = Geist_Mono({
@@ -16,8 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Demo - Ancient Sacred Herbals',
-  description: 'Demo presentation of home and about pages.',
+  title: 'Ancient Sacred Herbals - The call to the green path',
+  description:
+    'This space serves as a bridge between worlds – honoring the ancestral wisdom keepers while embracing the evolution of consciousness happening in our time.',
 };
 
 export default function RootLayout({

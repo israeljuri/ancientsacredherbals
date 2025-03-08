@@ -91,17 +91,17 @@ const Products = () => {
   return (
     <section className="bg-purple-100">
       <Container>
-        <div className="pt-10 pb-16 grid gap-16">
-          <article>
+        <div className="pb-10 grid gap-16">
+          {/* <article>
             <h3 className="flex flex-wrap gap-3 items-center justify-center text-5xl font-light text-purple-800">
               Herbal Kits
             </h3>
-          </article>
+          </article> */}
 
           <div className="embla" ref={emblaRef}>
             <div className="embla__container">{products}</div>
           </div>
-          <div className="mt-2 text-purple-800 grid place-items-center">
+          <div className="text-purple-800 grid place-items-center">
             <Link href="/products">
               <CenterUnderline label="See all products" />
             </Link>

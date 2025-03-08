@@ -57,9 +57,9 @@ const TalesOfWisdom = () => {
             </p>
           </article>
 
-          <div className="rounded-xl h-[30rem] w-full overflow-hidden">
+          <div className="rounded-xl h-[34rem] w-full overflow-hidden">
             <video
-              src="/videos/atbs.mp4"
+              src="/videos/body-system.mp4"
               autoPlay
               // controls
               muted
@@ -75,14 +75,15 @@ const TalesOfWisdom = () => {
                 key={cat.id}
               >
                 <div className="flex flex-col gap-1">
-                  <small className='text-purple-600 text-xs'>Ancient tales of the</small>
+                  <small className="text-purple-600 text-xs">
+                    Ancient tales of the
+                  </small>
                   <h3 className="text-3xl text-purple-700 md:text-4xl">
                     {cat.title}
                   </h3>
                 </div>
 
                 <span>
-                 
                   <Link
                     href={cat.path}
                     className="flex items-center text-purple-700 justify-start w-full gap-2 text-md md:text-md rounded-sm group"
@@ -107,6 +108,30 @@ const TalesOfWisdom = () => {
                 </span>
               </article>
             ))}
+
+            <button className="border border-purple-300 w-full py-2 px-4 rounded-xl col-span-full">
+              <Link
+                href=""
+                className="flex items-center text-purple-500 justify-center w-full gap-2 text-md md:text-md rounded-sm group"
+              >
+                <CenterUnderline label="See all 12 body system" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="10"
+                  height="10"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="lucide lucide-move-right group-hover:ml-5 transition-all duration-200"
+                >
+                  <path d="M18 8L22 12L18 16" />
+                  <path d="M2 12H22" />
+                </svg>
+              </Link>
+            </button>
           </div>
         </div>
       </Container>

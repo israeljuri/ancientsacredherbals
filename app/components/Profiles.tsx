@@ -58,7 +58,7 @@ const Profiles = () => {
     <section id="profiles" className="py-10 pb-20 bg-gray-100">
       <Container>
         <div className="">
-          <article className="grid gap-10 text-center md:text-center items-center justify-center mb-10">
+          <article className="grid gap-4 text-center md:text-center items-center justify-center mb-10">
             <h3 className="flex flex-wrap gap-3 items-center justify-center text-5xl font-light text-purple-700 ">
               <div className="flex flex-wrap items-center justify-center gap-5 md:gap-4">
                 <span>Herbal</span>

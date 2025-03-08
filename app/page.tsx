@@ -1,4 +1,5 @@
 import AncientRoot from './components/AncientRoot';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Intro from './components/Intro';
 import Products from './components/Products';
