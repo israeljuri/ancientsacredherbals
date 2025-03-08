@@ -9,7 +9,7 @@ const Header = () => {
           <video
             src="/videos/header.mp4"
             autoPlay
-            // controls
+            poster="/header-post.png"
             muted
             loop
             className="absolute z-10 top-0 left-0 w-full h-full object-cover"
@@ -18,7 +18,7 @@ const Header = () => {
           <div className="absolute top-0 left-0 w-full h-full z-20 bg-linear-to-br from-black to-purple-700 opacity-50"></div>
 
           <article className="z-40 absolute flex flex-col md:items-center items-center justify-center text-center md:text-center px-10 md:px-0 gap-5">
-            <h1 className="text-white text-6xl leading-15 max-w-[20ch] font-normal">
+            <h1 className="text-white text-5xl md:text-6xl max-w-[20ch] font-normal">
               <TextCutReveal containerClassName="flex md:block md:items-auto items-center md:justify-center justify-center">
                 Welcome To the Ancient Path of Sacred Plant Wisdom
               </TextCutReveal>

@@ -109,7 +109,7 @@ const TalesOfWisdom = () => {
               </article>
             ))}
 
-            <button className="border border-purple-300 w-full py-2 px-4 rounded-xl col-span-full">
+            <button className="border border-purple-300 w-full py-4 px-4 rounded-xl col-span-full">
               <Link
                 href=""
                 className="flex items-center text-purple-500 justify-center w-full gap-2 text-md md:text-md rounded-sm group"
