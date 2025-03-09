@@ -222,7 +222,7 @@ const Navbar = () => {
                 showAlt ? 'left-0' : '-left-100'
               )}
             >
-              <ul className="grid -mt-10 gap-2 text-2xl">
+              <ul className="grid -mt-10 gap-4 text-3xl">
                 {list.map((item) => (
                   <li
                     onClick={() => setShow(!show)}

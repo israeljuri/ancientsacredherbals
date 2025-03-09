@@ -70,7 +70,7 @@ const Profiles = () => {
                   className="w-[5rem] -rotate-45"
                 />
               </div>
-              <span className="-mt-10 sm:mt-0">Profiles</span>
+              <span className="">Profiles</span>
             </h3>
 
             <p className="font-light max-w-[59ch]">
