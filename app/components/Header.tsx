@@ -4,42 +4,25 @@ import TextCutReveal from './TextCutReveal';
 import { useEffect, useState } from 'react';
 
 const Header = () => {
-  const [isClient, setIsClient] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(true);
-
-  useEffect(() => {
-    setIsClient(true); // Runs only on the client side
-    const video = document.getElementById(
-      'bg-video'
-    ) as HTMLVideoElement | null;
-    if (video) {
-      video.play().catch(() => setIsPlaying(false)); // Handle autoplay restrictions
-    }
-  }, []);
-
-  if (!isClient) return null; // Prevents rendering on the server
-
   return (
     <>
       <header className="bg-purple-900">
         <div className="relative min-h-screen w-full pt-10 pb-20 md:pb-10 md:pt-0 grid grid-cols-1 md:grid-cols-[1fr_1.5fr_1fr] place-content-center place-items-center">
-          {isPlaying ? (
-            <video
-              id="bg-video"
-              className="absolute top-0 left-0 w-full h-full object-cover"
-              src="/videos/header.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-            />
-          ) : (
-            <img
-              src="/header-poster.png"
-              alt="Background"
-              className="absolute top-0 left-0 w-full h-full object-cover"
-            />
-          )}
+          <img
+            src="/header-poster.png"
+            alt="Background"
+            className="absolute z-10 top-0 left-0 w-full h-full object-cover"
+          />
+
+          <video
+            id="bg-video"
+            className="absolute z-20 top-0 left-0 w-full h-full object-cover"
+            src="/videos/header.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
 
           <div className="absolute top-0 left-0 w-full h-full z-20 bg-linear-to-br from-black to-purple-900 opacity-30"></div>
 

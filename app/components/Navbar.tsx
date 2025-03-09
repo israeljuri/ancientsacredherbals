@@ -27,11 +27,11 @@ const list: NavItem[] = [
     path: '/about',
   },
   {
-    label: 'Profiles',
+    label: 'Herbal Profiles',
     path: '/herbal-profiles',
   },
   {
-    label: 'ATBS',
+    label: 'Ancient tales of the body system',
     path: '/atbs',
   },
   {
@@ -222,15 +222,15 @@ const Navbar = () => {
                 showAlt ? 'left-0' : '-left-100'
               )}
             >
-              <ul className="grid -mt-10 gap-4 text-4xl">
+              <ul className="grid -mt-10 gap-2 text-2xl">
                 {list.map((item) => (
                   <li
                     onClick={() => setShow(!show)}
                     key={item.label}
                     className={
                       pathname === item.path
-                        ? 'text-purple-500'
-                        : 'text-gray-500 hover:text-black'
+                        ? 'text-purple-500 max-w-[10ch]'
+                        : 'text-gray-500 hover:text-black max-w-[15ch]'
                     }
                   >
                     <Link href={item.path}>
