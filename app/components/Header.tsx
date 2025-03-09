@@ -1,8 +1,7 @@
 'use client';
 import Link from 'next/link';
 import TextCutReveal from './TextCutReveal';
-import { useEffect, useState } from 'react';
-
+ 
 const Header = () => {
   return (
     <>
